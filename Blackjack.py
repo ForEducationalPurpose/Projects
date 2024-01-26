@@ -10,7 +10,7 @@ Dealer, Dealer2, Dealer3, Spieler, Spieler2, Spieler3 = random.choice(Karten), r
 while True:
     ALTER = str(input("Bitte geben sie ihr Alter ein:  "))
     try:
-        if alter >= 18:
+        if eval(ALTER) >= 18:
             print ("Alt genug es geht weiter")
             break
         else:
