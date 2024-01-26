@@ -4,7 +4,7 @@ Karten = [1, 2, 3 ,4 ,5, 6 ,7 ,8 ,9 ,10 ,11, ]
 Dealer, Dealer2, Dealer3, Spieler, Spieler2, Spieler3 = random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten)
 Alter = int(input(("Glücksspiel ist Ab 18. Bitte geben sie ihr Alter ein:  ")))
 if Alter < 18:
-   print("zu Jung komm wieder wenn du alt genug bist ")
+    print("zu Jung komm wieder wenn du alt genug bist ")
    exit()
 else:
    print ("Alt genug es geht weiter")
