@@ -8,7 +8,7 @@ Karten = [1, 2, 3 ,4 ,5, 6 ,7 ,8 ,9 ,10 ,11]
 Dealer, Dealer2, Dealer3, Spieler, Spieler2, Spieler3 = random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten)
 
 while True:
-    alter = str(input("Bitte geben sie ihr Alter ein:  "))
+    ALTER = str(input("Bitte geben sie ihr Alter ein:  "))
     try:
         if alter >= 18:
             print ("Alt genug es geht weiter")
@@ -20,10 +20,10 @@ while True:
         sys.exit(1)
 
 while True:
-    benutzername = str(input("Benutzer eingeben: "))
-    passwort = str(input("Passwort eingeben:  "))
-    if benutzername == "0":
-        if passwort == "0":
+    BENUTZERNAME = str(input("Benutzer eingeben: "))
+    PASSWORT = str(input("Passwort eingeben:  "))
+    if BENUTZERNAME == "0":
+        if PASSWORT == "0":
             print("Benutzername und Passwort Richtig")
             break
         else:
@@ -31,8 +31,7 @@ while True:
     else:
         print("Benutzername oder Passwort Falsch")
 
-##Wieso ein string mit einem input statt einen input selber?
-spiel = str(input("Soll es Los gehen?: "))
+input("Soll es Los gehen?: ")
 print("\nDealers Hand")
 print(Dealer + Dealer2)
 print("Deine Hand")
@@ -48,9 +47,9 @@ else:
     print("Der Dealer muss nicht Ziehen!")
 
 Dealer4 = Dealer + Dealer2 + Dealer
-nachfrage = str(input("Willst du noch eine Karte Ziehen?: (Ja/Nein) "))
+NACHFRAGE = str(input("Willst du noch eine Karte Ziehen?: (Ja/Nein) "))
 while True:
-    if nachfrage == "Ja":
+    if NACHFRAGE == "Ja":
         print("\nDeine Hand")
         print(Spieler + Spieler2 + Spieler3)
         print("Dealers Hand")
