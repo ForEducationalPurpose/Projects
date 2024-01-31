@@ -16,8 +16,7 @@ while True:
         if eval(ALTER) >= 18:
             print ("Alt genug es geht weiter")
             break
-        else:
-            print("Glücksspiel ist Ab 18, versuchen sie es nochmal")
+        print("Glücksspiel ist Ab 18, versuchen sie es nochmal")
     except:
         print("Bitte nächstes mal eine ganze zahl eingeben")
         sys.exit(1)
@@ -54,16 +53,15 @@ DealerEnd = DealerEnd + Dealer2
 
 NACHFRAGE = str(input("Willst du noch eine Karte Ziehen?: (Ja/Nein) "))
 while True:
-    if NACHFRAGE == "Ja":
+    if NACHFRAGE == "Ja" or NACHFRAGE == "ja":
         print("\nDeine Hand")
         print(Spieler1, "+", Spieler2, "+", Spieler3)
         SpielerEnd = SpielerEnd + Spieler3
         print("Dealers Hand")
         print(Dealer1, "+", "?")
         break
-    else:
-        print("\nDann Mal Sehen wer gewonnen Hat")
-        break
+    print("\nDann Mal Sehen wer gewonnen Hat")
+    break
 
 print("Dealer zeigt seine Karten")
 time.sleep(3)
