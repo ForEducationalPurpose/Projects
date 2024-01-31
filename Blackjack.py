@@ -5,7 +5,10 @@ import time
 
 print("Wilkommen Bei Blackjack")
 Karten = [1, 2, 3 ,4 ,5, 6 ,7 ,8 ,9 ,10 ,11]
-Dealer, Dealer2, Dealer3, Spieler, Spieler2, Spieler3 = random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten)
+Dealer1, Dealer2, Dealer3, Spieler1, Spieler2, Spieler3 = random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten), random.choice(Karten)
+
+SpielerEnd = 0
+DealerEnd = 0
 
 while True:
     ALTER = str(input("Bitte geben sie ihr Alter ein:  "))
@@ -18,7 +21,7 @@ while True:
     except:
         print("Bitte nächstes mal eine ganze zahl eingeben")
         sys.exit(1)
-
+""""
 while True:
     BENUTZERNAME = str(input("Benutzer eingeben: "))
     PASSWORT = str(input("Passwort eingeben:  "))
@@ -30,51 +33,51 @@ while True:
             print("Benutzername oder Passwort Falsch")
     else:
         print("Benutzername oder Passwort Falsch")
+"""
+
 
 input("Soll es Los gehen?: ")
-print("\nDealers Hand")
-print(Dealer + Dealer2)
-print("Deine Hand")
-print(Spieler + Spieler2)
-Dealer5 = Dealer2 + Dealer
-Spieler4 = Spieler+ Spieler2
-Dealer4 = Dealer + Dealer2
+##First Cards
+print("\nDeine Hand")
+SpielerEnd = SpielerEnd + Spieler1
+print(SpielerEnd)
+print("Dealers Hand")
+DealerEnd = DealerEnd + Dealer1
+print(DealerEnd)
+##Second Cards
+print("\nDeine Hand")
+SpielerEnd = SpielerEnd + Spieler2
+print(Spieler1, "+", Spieler2)
+print("Dealers Hand")
+print(DealerEnd, "+", "?")
+DealerEnd = DealerEnd + Dealer2
 
-if Dealer4 <= 16:
-    print("Dealer muss eine Karte Ziehen!:" ) 
-    print(Dealer3 + Dealer2 + Dealer)
-else:
-    print("Der Dealer muss nicht Ziehen!")
-
-Dealer4 = Dealer + Dealer2 + Dealer
 NACHFRAGE = str(input("Willst du noch eine Karte Ziehen?: (Ja/Nein) "))
 while True:
     if NACHFRAGE == "Ja":
         print("\nDeine Hand")
-        print(Spieler + Spieler2 + Spieler3)
+        print(Spieler1, "+", Spieler2, "+", Spieler3)
+        SpielerEnd = SpielerEnd + Spieler3
         print("Dealers Hand")
-        print(Dealer + Dealer2 + Dealer3)
+        print(Dealer1, "+", "?")
         break
     else:
         print("\nDann Mal Sehen wer gewonnen Hat")
         break
 
-Spieler = Spieler + Spieler2 + Spieler3
-Dealer = Dealer + Dealer2 + Dealer3
-
-print("Ergebnis wird geladen")
+print("Dealer zeigt seine Karten")
 time.sleep(3)
 
-print("\nSpieler:", Spieler, "\nDealer", Dealer)
-if Dealer >= 22:
+print("\nSpieler:", SpielerEnd, "\nDealer", DealerEnd)
+if DealerEnd >= 22:
     print("Dealer hat überschritten, Du hast Gewonnen!")
-elif Spieler >= 22:
+elif SpielerEnd >= 22:
     print("Du hast überschritten, Der  Dealer hat gewonnen!")
-elif Dealer < Spieler & Spieler <=21:
+elif DealerEnd < SpielerEnd & SpielerEnd <=21:
     print("Du hast Gewonnen!")
-elif Spieler < Dealer & Dealer <=21:
+elif SpielerEnd < DealerEnd & DealerEnd <=21:
     print("Dealer Gewinnt")
-elif Spieler == Dealer:
+elif SpielerEnd == DealerEnd:
     print("unentschieden")
 else:
     print("error")
