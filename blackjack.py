@@ -1,3 +1,4 @@
+"""Module Docstring for pylint"""
 import random
 ##Used for choosing given numbers randomly for the hand cards
 import sys
