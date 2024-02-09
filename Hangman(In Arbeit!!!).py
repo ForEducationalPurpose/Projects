@@ -10,6 +10,9 @@ def Eingabe_überprüfung():
         print("Richtiger Buchstabe")
         print()
         return True
+    elif Eingabe == Wort:
+       print("Du Hast das Wort richtig erraten. Du hast Gewonnen!")
+       exit()   
    else:
         print("Falscher Buchstabe ein Strich kommt Dazu")
         
