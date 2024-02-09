@@ -11,7 +11,7 @@ def Eingabe_überprüfung():
         print()
         return True
     elif Eingabe == Wort:
-       print("Du Hast das Wort richtig erraten. Du hast Gewonnen!")
+       print("Du hast das Wort richtig erraten. Du hast gewonnen!")
        exit()   
    else:
         print("Falscher Buchstabe ein Strich kommt Dazu")
